@@ -10,6 +10,32 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+
+    <style>
+    /* This logic only triggers on screens narrower than 640px (phones) */
+    @media screen and (max-width: 640px) {
+      
+      /* 1. Force the table cells to display as blocks (stacked) instead of side-by-side */
+      td {
+        display: block !important;
+        width: 100% !important;
+        text-align: center; /* Centers the image */
+        box-sizing: border-box; /* Ensures padding doesn't make it wider than 100% */
+      }
+
+      /* 2. Fix the padding so it looks nice on mobile */
+      td img {
+        margin-bottom: 10px; /* Adds space between image and text */
+      }
+      
+      /* 3. Optional: Make the image slightly smaller or responsive on mobile */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+
   </head>
 
   <body>
@@ -25,7 +51,7 @@
                   Bhanuka Silva
                 </p>
                 <p>
-                  Hi, I'm a researcher at Networked Systems and Security (NSS) Research Lab at the University of Sydney.
+                  Hi, I'm a researcher at Networked Systems and Security (NSS) Research Lab at the University of Sydney specialised in large language and multi-modal models (LLMs/LMMs). 
                   I am interested in developing verifiable and explainable AI systems under real-world constraints.  
                 </p>
                 <p style="text-align:center">
@@ -36,8 +62,8 @@
               </td>
               
               <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/profile.jpg">
-                    <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/profile.jpg" class="hoverZoomLink">
+                <a href="images/profile_v2.jpg">
+                    <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/profile_v2.jpg" class="hoverZoomLink">
                 </a>
               </td>
             </tr>
@@ -66,11 +92,11 @@
               </td>
 
               <td style="padding:20px;width:60%;vertical-align:middle">
-                <a href="#">
-                  <span class="papertitle">Entailment Driven Privacy Policy Classification using LLMs</span>
-                </a>
+
+                <span class="papertitle">Entailment Driven Privacy Policy Classification using LLMs</span>
+
                 <br>
-                <strong>Silva B.</strong>, Denipitiyage D., Seneviratne S., Mahanti A., Seneviratne A.
+                <span style="color: darkgreen"><strong>Silva B.</strong>, Denipitiyage D., Seneviratne S., Mahanti A., Seneviratne A.</span>
                 <br>
                 <em>BuildSec</em>, 2024
                 <br>
@@ -93,15 +119,13 @@
                 <img src='images/PrivPRISM.gif' width="300" alt="Project animation">
               </td>
               <td style="padding:20px;width:60%;vertical-align:middle">
-                <a href="#">
-                  <span class="papertitle">PrivPRISM - Automatically Detecting Discrepancies Between Google Play Data Safety Declarations and Developer Privacy Policies</span>
-                </a>
+                <span class="papertitle">PrivPRISM - Automatically Detecting Discrepancies Between Google Play Data Safety Declarations and Developer Privacy Policies</span>
                 <br>
-                <strong>Silva B.</strong>, Denipitiyage D., Mahanti A., Seneviratne A., Seneviratne S.               
+                <span style="color: darkgreen"><strong>Silva B.</strong>, Denipitiyage D., Mahanti A., Seneviratne A., Seneviratne S.</span>               
                 <br>
                 The University of Sydney, University of New South Wales
                 <br>
-                <a href="#">Paper</a> (To be released)
+                <a href="#">Paper</a> (coming soon)
                 <p></p>
                 <p>
                   PrivPRISM is a novel systematic language modelling framework that combines encoder and decoder (LLM) instances leveraged to fine-grained extract and verify data practices from complex privacy policies. In a large scale study covering ~10,000 popular apps in Google Play Store, we uncover 53% game and 61% non-game apps exhibiting discrepancies between policies and developer self-declared data safety (summary) labels. Our findings include high-profile cases with 100M+ downloads with majority of apps reusing policies and not declaring possible sensitive data accesses evident by code level analysis.  
@@ -114,15 +138,15 @@
                 <img src='images/PrivSTRUCT.gif' width="300" alt="Project animation">
               </td>
               <td style="padding:20px;width:60%;vertical-align:middle">
-                <a href="#">
-                  <span class="papertitle">PrivSTRUCT: Untangling Data Purpose Compliance of Privacy Policies in Google Play Store</span>
-                </a>
+
+                <span class="papertitle">PrivSTRUCT: Untangling Data Purpose Compliance of Privacy Policies in Google Play Store</span>
+
                 <br>
-                <strong>Silva B.</strong>, Mahanti A., Seneviratne A., Seneviratne S.           
+                <span style="color: darkgreen"><strong>Silva B.</strong>, Mahanti A., Seneviratne A., Seneviratne S.</span>           
                 <br>
                 The University of Sydney, University of New South Wales
                 <br>
-                <a href="#">Paper</a> (To be released)
+                <a href="#">Paper</a> (coming soon)
                 <p></p>
                 <p>
                   Existing research typically treats these policies as flat, uniform text, extracting information without regard for the document’s logical hierarchy.
@@ -138,9 +162,9 @@
                 <img src='images/PrivDASH.gif' width="300" alt="Project animation">
               </td>
               <td style="padding:20px;width:60%;vertical-align:middle">
-                <a href="#">
-                  <span class="papertitle">PrivDASH: An Interactive Data-practice Compliance Dashboard for Mobile App Privacy Policies</span>
-                </a>
+
+                <span class="papertitle">PrivDASH: An Interactive Data-practice Compliance Dashboard for Mobile App Privacy Policies</span>
+
                 <br>
                 The University of Sydney
                 <br>
@@ -157,11 +181,11 @@
                 <img src='images/tmc2025.gif' width="300" alt="Project animation">
               </td>
               <td style="padding:20px;width:60%;vertical-align:middle">
-                <a href="#">
-                  <span class="papertitle">Detecting and Characterising Mobile App Metamorphosis in Google Play Store</span>
-                </a>
+
+                <span class="papertitle">Detecting and Characterising Mobile App Metamorphosis in Google Play Store</span>
+
                 <br>
-                Denipitiyage D., <strong>Silva B.</strong>, Gunathilaka K., Seneviratne S., Mahanti A., Seneviratne A., Chawla S..           
+                <span style="color: darkgreen">Denipitiyage D., <strong>Silva B.</strong>, Gunathilaka K., Seneviratne S., Mahanti A., Seneviratne A., Chawla S..</span>           
                 <br>
                 TMC 2025
                 <br>
@@ -183,11 +207,9 @@
                 <img src='images/trustcom25.gif' width="300" alt="Project animation">
               </td>
               <td style="padding:20px;width:60%;vertical-align:middle">
-                <a href="#">
-                  <span class="papertitle">Detecting Content Rating Violations in Android Applications: A Vision-Language Approach</span>
-                </a>
+                <span class="papertitle">Detecting Content Rating Violations in Android Applications: A Vision-Language Approach</span>
                 <br>
-                Denipitiyage D., <strong>Silva B.</strong>, Seneviratne S., Seneviratne A., Chawla S..           
+                <span style="color: darkgreen">Denipitiyage D., <strong>Silva B.</strong>, Seneviratne S., Seneviratne A., Chawla S.. </span>          
                 <br>
                 TrustCom 2025
                 <br>
@@ -215,7 +237,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research Projects - Cyber Physiscal Systems</h2>
+                <h2>Research Projects - Cyber Physical Systems</h2>
                 <p>
                   I am also interested in how to develop novel algorithms to interact with physical systems.
                 </p>
@@ -228,16 +250,15 @@
             <tr>
               
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src='images/iser2020.gif' width="200" alt="Project animation">
+                <img src='images/iser2020.gif' width="300" alt="Project animation">
               </td>
 
               <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="#">
-                  <span class="papertitle">Hybrid Wheel-Leg Locomotion in Rough Terrain</span>
-                </a>
+                <span class="papertitle">Hybrid Wheel-Leg Locomotion in Rough Terrain</span>
                 <br>
-                <strong>Silva B.</strong>,
-                <a href="#">Perera U., Thilakarathna T., Athapattu I., Jayasekara P., Lalitharatne T., Kottege N., and Bandyopadhyay T. </a>               
+                <span style="color: darkgreen">
+                <strong>Silva B.</strong>, Perera U., Thilakarathna T., Athapattu I., Jayasekara P., Lalitharatne T., Kottege N., and Bandyopadhyay T.            
+                </span>
                 <br>
                 <em>ISER</em>, 2020
                 <br>
@@ -256,16 +277,14 @@
 
             <tr>
               
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src='images/acra2020.gif' width="200" alt="Project animation">
+              <td style="padding:20px;width:40%;vertical-align:middle">
+                <img src='images/acra2020.gif' width="300" alt="Project animation">
               </td>
 
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="#">
-                  <span class="papertitle">Accessible Torque Bandwidth of a Series Elastic Actuator Considering the Thermodynamic Limitations</span>
-                </a>
+              <td style="padding:20px;width:60%;vertical-align:middle">
+                <span class="papertitle">Accessible Torque Bandwidth of a Series Elastic Actuator Considering the Thermodynamic Limitations</span>
                 <br>
-                <strong>Silva B.</strong>, Kottege N.             
+                <span style="color: darkgreen"><strong>Silva B.</strong>, Kottege N.</span>             
                 <br>
                 <em>ACRA</em>, 2020
                 <br>
